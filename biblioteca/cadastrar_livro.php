@@ -10,7 +10,7 @@
 
     $conexao = mysqli_connect($host, $usuario, $senha, $banco);
 
-    $sql = "insert into livro (título,autor,ano) values ('$titulo', '$autor', '$ano')";
+    $sql = "insert into livro (titulo,autor,ano) values ('$titulo','$autor','$ano') ";
 
     $resultado = mysqli_query($conexao,$sql);
 
