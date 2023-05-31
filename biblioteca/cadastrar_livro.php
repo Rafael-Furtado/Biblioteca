@@ -6,11 +6,11 @@
     $host = 'localhost';
     $usuario = 'root';
     $senha = '';
-    $banco = 'biblioteca';
+    $banco = 'livraria';
 
     $conexao = mysqli_connect($host, $usuario, $senha, $banco);
 
-    $sql = "insert into livro (titulo,autor,ano) values ('$titulo','$autor','$ano') ";
+    $sql = "INSERT INTO livro (titulo,autor,ano) VALUES ('$titulo','$autor','$ano') ";
 
     $resultado = mysqli_query($conexao,$sql);
 
@@ -20,4 +20,6 @@
     else {
         echo 'Erro ao Cadastrar o Livro';
     }
+
+    mysqli_close($conexao);
 ?>
